@@ -25,5 +25,11 @@
     "test": "gulp test"
   },
   "author": "nate-wilkins",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "eslint-plugin",
+    "bdd",
+    "testing",
+    "focus"
+  ]
 }
