@@ -5,15 +5,17 @@
  * @global it
  * @global expect
  *
+ * @global describeAnimal
+ *
  * @error Exclude.ToHaveNone@MemberExpression
  *
  * @description:
- * Tests to see if there are any `describe.skip` tests
+ * Tests to see if there are any `describeXYZ.skip` tests
  */
 'use strict';
 
 (function (root) {
-	describe.skip('something', function () {
+	describeAnimal.skip('lion', function () {
 		it("should do stuff", function () {
 
 		});

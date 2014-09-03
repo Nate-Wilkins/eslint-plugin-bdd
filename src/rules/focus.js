@@ -8,7 +8,8 @@
  */
 'use strict';
 
-var Errors = require('./../errors').Focus;
+var Errors = require('./../errors').Focus,
+	Common = require('./../common');
 
 /**
  *
@@ -18,18 +19,20 @@ var rule = module.exports = function (context) {
 
 	return {
 		"Identifier": function (node) {
-			["ddescribe", "iit"].forEach(function (name) {
-				if (node.name !== name) { return; }
-				context.report(node, Errors.ToHaveNone);
-			});
+			if (Common.Identifiers.Focus.some(function (name) {
+				return node.name.indexOf(name) === 0;
+			})) { context.report(node, Errors.ToHaveNone); }
+
 		},
 		"MemberExpression": function (node) {
 			if (!node.object || node.object.type !== "Identifier") { return; }
 			if (!node.property || node.property.type !== "Identifier") { return; }
 
-			if (["describe", "it"].indexOf(node.object.name) === -1) { return; }
-			if (["only"].indexOf(node.property.name) === -1) { return; }
-			context.report(node, Errors.ToHaveNone);
+			if (Common.Identifiers.Original.some(function (name) {
+				return node.object.name.indexOf(name) === 0;
+			}) && Common.Identifiers.Only.some(function (name) {
+				return node.property.name === name;
+			})) { context.report(node, Errors.ToHaveNone); }
 		}
 	};
 };

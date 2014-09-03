@@ -8,7 +8,8 @@
  */
 'use strict';
 
-var Errors = require('./../errors').Exclude;
+var Errors = require('./../errors').Exclude,
+	Common = require('./../common');
 
 /**
  *
@@ -18,8 +19,8 @@ var rule = module.exports = function (context) {
 
 	return {
 		"Identifier": function (node) {
-			["xdescribe", "xit"].forEach(function (name) {
-				if (node.name !== name) { return; }
+			Common.Identifiers.Exclude.some(function (name) {
+				if (node.name.indexOf(name) !== 0) { return; }
 				context.report(node, Errors.ToHaveNone);
 			});
 		},
@@ -27,16 +28,19 @@ var rule = module.exports = function (context) {
 			if (!node.object || node.object.type !== "Identifier") { return; }
 			if (!node.property || node.property.type !== "Identifier") { return; }
 
-			if (["describe", "it"].indexOf(node.object.name) === -1) { return; }
-			if (["skip"].indexOf(node.property.name) === -1) { return; }
-			context.report(node, Errors.ToHaveNone);
+			if (Common.Identifiers.Original.some(function (name) {
+				return node.object.name.indexOf(name) === 0;
+			}) && Common.Identifiers.Skip.some(function (name) {
+				return node.property.name === name;
+			})) { context.report(node, Errors.ToHaveNone); }
 		},
 		"CallExpression": function (node) {
 			if (node.callee.type !== "Identifier") { return; }
-			if (["describe", "it"].indexOf(node.callee.name) === -1) { return; }
-
 			if (node.arguments.length === 2) { return; }
-			context.report(node, Errors.ToHaveNone);
+
+			if (Common.Identifiers.Original.some(function (name) {
+				return node.callee.name.indexOf(name) === 0;
+			})) { context.report(node, Errors.ToHaveNone); }
 		}
 	};
 };

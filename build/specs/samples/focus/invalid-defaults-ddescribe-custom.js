@@ -5,17 +5,19 @@
  * @global it
  * @global expect
  *
- * @error Exclude.ToHaveNone@MemberExpression
+ * @global ddescribeAnimal
+ *
+ * @error Focus.ToHaveNone@Identifier
  *
  * @description:
- * Tests to see if there are any `describe.skip` tests
+ * Tests to see if there are any `ddescribeXYZ` focus tests
  */
 'use strict';
 
 (function (root) {
-	describe.skip('something', function () {
+	ddescribeAnimal('something', function () {
 		it("should do stuff", function () {
-
+			expect(true).toBe(true);
 		});
 	});
 }(this));
