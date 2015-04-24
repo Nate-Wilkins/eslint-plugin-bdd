@@ -30,6 +30,7 @@
   "license": "MIT",
   "keywords": [
     "eslintplugin",
+    "eslint-plugin"
     "eslint",
     "bdd",
     "tdd",
