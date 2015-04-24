@@ -14,6 +14,6 @@
 
 (function (root) {
 	describe('something', function () {
-		it("should do stuff");
+		it('should do stuff');
 	});
 }(this));

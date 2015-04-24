@@ -16,7 +16,7 @@
 
 (function (root) {
 	describeAnimal.skip('lion', function () {
-		it("should do stuff", function () {
+		it('should do stuff', function () {
 
 		});
 	});

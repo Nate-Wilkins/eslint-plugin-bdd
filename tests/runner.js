@@ -8,6 +8,6 @@
  */
 'use strict';
 
-require('eslint-tool-test-files').describePlugin("eslint-plugin-bdd", "./../src/rules", [
-	"./specs/samples/**/*.js"
-], require('./../../src/errors'));
+require('eslint-tool-test-files').describePlugin('eslint-plugin-bdd', './src/rules', [
+	'./tests/samples/**/*.js'
+], require('./../src/errors'));

@@ -8,13 +8,13 @@
  * @error Focus.ToHaveNone@Identifier
  *
  * @description:
- * Tests to see if there are any `iit` focus tests
+ * Tests to see if there are any `ddescribe` focus tests
  */
 'use strict';
 
 (function (root) {
-	describe('something', function () {
-		iit("should do stuff", function () {
+	ddescribe('something', function () {
+		it('should do stuff', function () {
 			expect(true).toBe(true);
 		});
 	});

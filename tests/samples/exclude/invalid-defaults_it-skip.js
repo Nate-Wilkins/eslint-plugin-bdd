@@ -5,16 +5,16 @@
  * @global it
  * @global expect
  *
- * @error Focus.ToHaveNone@MemberExpression
+ * @error Exclude.ToHaveNone@MemberExpression
  *
  * @description:
- * Tests to see if there are any `it.only` tests
+ * Tests to see if there are any `it.skip` tests
  */
 'use strict';
 
 (function (root) {
 	describe('something', function () {
-		it.only("should do stuff", function () {
+		it.skip('should do stuff', function () {
 
 		});
 	});

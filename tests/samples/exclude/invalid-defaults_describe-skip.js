@@ -8,13 +8,13 @@
  * @error Exclude.ToHaveNone@MemberExpression
  *
  * @description:
- * Tests to see if there are any `it.skip` tests
+ * Tests to see if there are any `describe.skip` tests
  */
 'use strict';
 
 (function (root) {
-	describe('something', function () {
-		it.skip("should do stuff", function () {
+	describe.skip('something', function () {
+		it('should do stuff', function () {
 
 		});
 	});

@@ -8,13 +8,13 @@
  * @error Focus.ToHaveNone@MemberExpression
  *
  * @description:
- * Tests to see if there are any `describe.only` tests
+ * Tests to see if there are any `it.only` tests
  */
 'use strict';
 
 (function (root) {
-	describe.only('something', function () {
-		it("should do stuff", function () {
+	describe('something', function () {
+		it.only('should do stuff', function () {
 
 		});
 	});

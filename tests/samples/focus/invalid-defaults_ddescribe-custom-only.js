@@ -16,7 +16,7 @@
 
 (function (root) {
 	describeAnimal.only('tiger', function () {
-		it("should do stuff", function () {
+		it('should do stuff', function () {
 
 		});
 	});

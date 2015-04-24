@@ -16,7 +16,7 @@
 
 (function (root) {
 	ddescribeAnimal('something', function () {
-		it("should do stuff", function () {
+		it('should do stuff', function () {
 			expect(true).toBe(true);
 		});
 	});

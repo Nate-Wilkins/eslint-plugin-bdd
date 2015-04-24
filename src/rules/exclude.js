@@ -18,15 +18,15 @@ var Errors = require('./../errors').Exclude,
 var rule = module.exports = function (context) {
 
 	return {
-		"Identifier": function (node) {
+		'Identifier': function (node) {
 			Common.Identifiers.Exclude.some(function (name) {
 				if (node.name.indexOf(name) !== 0) { return; }
 				context.report(node, Errors.ToHaveNone);
 			});
 		},
-		"MemberExpression": function (node) {
-			if (!node.object || node.object.type !== "Identifier") { return; }
-			if (!node.property || node.property.type !== "Identifier") { return; }
+		'MemberExpression': function (node) {
+			if (!node.object || node.object.type !== 'Identifier') { return; }
+			if (!node.property || node.property.type !== 'Identifier') { return; }
 
 			if (Common.Identifiers.Original.some(function (name) {
 				return node.object.name.indexOf(name) === 0;
@@ -34,8 +34,8 @@ var rule = module.exports = function (context) {
 				return node.property.name === name;
 			})) { context.report(node, Errors.ToHaveNone); }
 		},
-		"CallExpression": function (node) {
-			if (node.callee.type !== "Identifier") { return; }
+		'CallExpression': function (node) {
+			if (node.callee.type !== 'Identifier') { return; }
 			if (node.arguments.length === 2) { return; }
 
 			if (Common.Identifiers.Original.some(function (name) {

@@ -6,13 +6,13 @@
  * @global expect
  *
  * @description:
- * Tests that there are no focus tests
+ * Tests that all tests are implemented
  */
 'use strict';
 
 (function (root) {
-	describe("something", function () {
-		it("should do stuff", function () {
+	describe('something', function () {
+		it('should do stuff', function () {
 
 		});
 	});

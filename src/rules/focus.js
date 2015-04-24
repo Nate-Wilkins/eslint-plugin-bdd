@@ -18,15 +18,15 @@ var Errors = require('./../errors').Focus,
 var rule = module.exports = function (context) {
 
 	return {
-		"Identifier": function (node) {
+		'Identifier': function (node) {
 			if (Common.Identifiers.Focus.some(function (name) {
 				return node.name.indexOf(name) === 0;
 			})) { context.report(node, Errors.ToHaveNone); }
 
 		},
-		"MemberExpression": function (node) {
-			if (!node.object || node.object.type !== "Identifier") { return; }
-			if (!node.property || node.property.type !== "Identifier") { return; }
+		'MemberExpression': function (node) {
+			if (!node.object || node.object.type !== 'Identifier') { return; }
+			if (!node.property || node.property.type !== 'Identifier') { return; }
 
 			if (Common.Identifiers.Original.some(function (name) {
 				return node.object.name.indexOf(name) === 0;
