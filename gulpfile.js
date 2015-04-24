@@ -8,17 +8,41 @@
  */
 'use strict';
 
-require('./build/tasks')({
-	cwd: "./build",
+require('./build')(require('gulp'), {
+	path: '.',
 
-	eslintrc: "./../.eslintrc",
+	files: {
+		all: [
+			'<%= config.path %>/**/*'
+		],
 
-	source: {
-		files: ["./../src/**/*.js"]
+		js: [
+			'<%= config.path %>/**/*.js',
+			'!./node_modules/**'
+		],
+
+		eslintrc: '<%= config.path %>/.eslintrc'
 	},
 
-	test: {
-		files: ["./specs/**/*-spec.js", "./specs/runner.js"],
+	src: {
+		path: '<%= config.path %>/src',
+
+		files: [
+			'<%= src.path %>/**/*'
+		]
+	},
+
+	tests: {
+		path: '<%= config.path %>/tests',
+
+		files: {
+			all: [
+				'<%= tests.path %>/**/*'
+			],
+
+			runner: '<%= tests.path %>/runner.js'
+		},
+
 		reporter: 'spec'
 	}
 });
