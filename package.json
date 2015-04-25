@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-bdd",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ESLint plugin with rules to lint BDD specs.",
   "main": "./src/rules",
   "repository": {
@@ -9,9 +9,11 @@
   },
   "homepage": "http://github.com/nate-wilkins/eslint-plugin-bdd",
   "bugs": "http://github.com/nate-wilkins/eslint-plugin-bdd/issues",
-  "dependencies": {},
+  "dependencies": {
+    "require-directory": "^2.1.0"
+  },
   "peerDependencies": {
-    "eslint": "^0.19.0"
+    "eslint": ">=0.8.0"
   },
   "devDependencies": {
     "chai": "^2.2.0",
@@ -19,8 +21,7 @@
     "gulp": "^3.8.11",
     "gulp-eslint": "^0.9.0",
     "gulp-factory-loader": "0.0.2",
-    "gulp-mocha": "^2.0.1",
-    "require-directory": "^2.1.0"
+    "gulp-mocha": "^2.0.1"
   },
   "scripts": {
     "test": "gulp test"
