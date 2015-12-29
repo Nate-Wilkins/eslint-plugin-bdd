@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-bdd",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "ESLint plugin with rules to lint BDD specs.",
   "main": "./src/rules",
   "repository": {
@@ -36,6 +36,12 @@
     "tdd",
     "testing",
     "focus",
-    "exclude"
+    "exclude",
+    "jasmine",
+    "mocha",
+    "fit",
+    "fdescribe",
+    "ddescribe",
+    "iit"
   ]
 }
