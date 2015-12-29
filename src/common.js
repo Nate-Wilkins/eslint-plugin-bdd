@@ -15,7 +15,7 @@ module.exports = {
 		Exclude: ['xdescribe', 'xit'],
 		Skip: ['skip'],
 
-		Focus: ['ddescribe', 'iit'],
+		Focus: ['ddescribe', 'iit', 'fdescribe', 'fit'],
 		Only: ['only']
 	}
 };
