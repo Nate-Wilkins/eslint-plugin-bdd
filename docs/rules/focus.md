@@ -21,9 +21,9 @@ describe('my cool tests', function () {
 // only
 describe.only('other cool tests');
 
-// ddescribe
-ddescribe('something', function () {
-	iit('more stuff', function () {
+// fdescribe
+fdescribe('something', function () {
+	fit('more stuff', function () {
 
 	});
 });
