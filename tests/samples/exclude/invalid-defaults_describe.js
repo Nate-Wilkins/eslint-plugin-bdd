@@ -13,5 +13,5 @@
 'use strict';
 
 (function (root) {
-	describe('something');
+  describe('something');
 }(this));

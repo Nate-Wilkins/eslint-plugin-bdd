@@ -9,10 +9,10 @@
 'use strict';
 
 module.exports = {
-	Focus: {
-		ToHaveNone: "Expected to find no focus tests"
-	},
-	Exclude: {
-		ToHaveNone: "Expected to not exclude tests"
-	}
+  Focus: {
+    ToHaveNone: "Expected to find no focus tests"
+  },
+  Exclude: {
+    ToHaveNone: "Expected to not exclude tests"
+  }
 };

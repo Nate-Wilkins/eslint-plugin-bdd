@@ -13,7 +13,7 @@
 'use strict';
 
 (function (root) {
-	describe('something', function () {
-		it('should do stuff');
-	});
+  describe('something', function () {
+    it('should do stuff');
+  });
 }(this));

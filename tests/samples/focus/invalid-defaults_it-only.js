@@ -13,9 +13,9 @@
 'use strict';
 
 (function (root) {
-	describe('something', function () {
-		it.only('should do stuff', function () {
+  describe('something', function () {
+    it.only('should do stuff', function () {
 
-		});
-	});
+    });
+  });
 }(this));

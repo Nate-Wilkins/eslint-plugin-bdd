@@ -13,9 +13,9 @@
 'use strict';
 
 (function (root) {
-	ddescribe('something', function () {
-		it('should do stuff', function () {
-			expect(true).toBe(true);
-		});
-	});
+  ddescribe('something', function () {
+    it('should do stuff', function () {
+      expect(true).toBe(true);
+    });
+  });
 }(this));

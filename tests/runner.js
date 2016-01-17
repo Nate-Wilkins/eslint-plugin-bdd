@@ -9,5 +9,5 @@
 'use strict';
 
 require('eslint-tool-test-files').describePlugin('eslint-plugin-bdd', './src/rules', [
-	'./tests/samples/**/*.js'
+  './tests/samples/**/*.js'
 ], require('./../src/errors'));

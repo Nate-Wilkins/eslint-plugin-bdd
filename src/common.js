@@ -9,13 +9,13 @@
 'use strict';
 
 module.exports = {
-	Identifiers: {
-		Original: ['describe', 'it'],
+  Identifiers: {
+    Original: ['describe', 'it'],
 
-		Exclude: ['xdescribe', 'xit'],
-		Skip: ['skip'],
+    Exclude: ['xdescribe', 'xit'],
+    Skip: ['skip'],
 
-		Focus: ['ddescribe', 'iit', 'fdescribe', 'fit'],
-		Only: ['only']
-	}
+    Focus: ['ddescribe', 'iit', 'fdescribe', 'fit'],
+    Only: ['only']
+  }
 };

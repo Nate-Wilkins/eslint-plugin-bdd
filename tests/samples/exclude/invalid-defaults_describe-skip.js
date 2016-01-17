@@ -13,9 +13,9 @@
 'use strict';
 
 (function (root) {
-	describe.skip('something', function () {
-		it('should do stuff', function () {
+  describe.skip('something', function () {
+    it('should do stuff', function () {
 
-		});
-	});
+    });
+  });
 }(this));

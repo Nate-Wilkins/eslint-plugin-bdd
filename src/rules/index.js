@@ -1,6 +1,6 @@
 /**
  * @object
- * @version 1.1.1
+ * @version 2.0.0
  * @author nate-wilkins <nwilkins2012@gmail.com> (https://github.com/nate-wilkins)
  * @license MIT (c) 2014
  *
@@ -12,9 +12,9 @@
 var requireDirectory = require('require-directory');
 
 module.exports = {
-	rules: requireDirectory(module),
-	rulesConfig: {
-		'exclude': 2,
-		'focus': 2
-	}
+  rules: requireDirectory(module),
+  rulesConfig: {
+    'exclude': [2, { focus: [], exclude: [] }],
+    'focus': 2
+  }
 };
