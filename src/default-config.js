@@ -12,7 +12,7 @@ module.exports = function (config) {
   config = config || {};
   config.original = config.original || [];
   config.focus = config.focus || [];
-  config.exlcude = config.exclude || [];
+  config.exclude = config.exclude || [];
   config.skip = config.skip || [];
   config.only = config.only || [];
   return config;
