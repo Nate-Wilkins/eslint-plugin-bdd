@@ -42,7 +42,7 @@ var rule = module.exports = function (context) {
       if (node.arguments.length === 2) { return; }
 
       if (Common.Identifiers.Original.concat(config.original).some(function (name) {
-        return node.callee.name.indexOf(name) === 0;
+        return node.callee.name === name;
       })) { context.report(node, Errors.ToHaveNone); }
     }
   };
