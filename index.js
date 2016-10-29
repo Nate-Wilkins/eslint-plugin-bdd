@@ -1,6 +1,6 @@
 /**
  * @object
- * @version 2.0.0
+ * @version 2.1.1
  * @author nate-wilkins <nwilkins2012@gmail.com> (https://github.com/nate-wilkins)
  * @license MIT (c) 2014
  *
