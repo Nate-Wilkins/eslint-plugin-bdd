@@ -2,16 +2,14 @@
   "name": "eslint-plugin-bdd",
   "version": "2.1.0",
   "description": "ESLint plugin with rules to lint BDD specs.",
-  "main": "./src/rules",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "http://github.com/nate-wilkins/eslint-plugin-bdd"
   },
   "homepage": "http://github.com/nate-wilkins/eslint-plugin-bdd",
   "bugs": "http://github.com/nate-wilkins/eslint-plugin-bdd/issues",
-  "dependencies": {
-    "require-directory": "^2.1.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "eslint": ">=0.8.0"
   },

@@ -9,10 +9,11 @@
  */
 'use strict';
 
-var requireDirectory = require('require-directory');
-
 module.exports = {
-  rules: requireDirectory(module),
+  rules: {
+    'exclude': require('./src/rules/exclude'),
+    'focus': require('./src/rules/focus')
+  },
   rulesConfig: {
     'exclude': [2, { focus: [], exclude: [] }],
     'focus': 2
