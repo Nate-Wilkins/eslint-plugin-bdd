@@ -7,7 +7,5 @@ node_modules/
 .gitattributes
 .npmignore
 .DS_Store
-gulpfile.js
 tests
-docs
 build

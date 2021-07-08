@@ -1,30 +1,37 @@
-# Exclude
+# `bdd/exclude` Rule
 
 > Rule to determine if any specs/tests are being excluded.
 
-If any behavioral `it`, `describe*` invokes their `skip` method or only provide a description this rule will catch them.
-This rule also catches the handy `xdescribe` and `xit` that some BDD frameworks support.
+This rule catches the following cases:
 
-## Example
+- `describe*.skip(/* */)`:
+- `xit(/* */)`, `xdescribe(/* */)`: Provided by some frameworks to exclude tests
+- `it('An empty test')`, `describe*('An empty test')`: Disallow empty tests
+
+## Examples
+
+The `skip` method is provided by some frameworks to exclude tests.
+
 ```js
-describe('my cool tests', function () {
-	// skip
-	it.skip('should work', function () {
-		// Cool stuff
-	});
-
-	// no additional argument
-	it('should work again');
-});
-
-// skip, no additional argument
-describe.skip('other cool tests');
-
-// xdescribe
-xdescribe('skip this too', function () {
-	// xit
-	xit('not cool', function () {
-		// Not run
-	});
+it.skip(() => {
+  /* Skipped test. */
 });
 ```
+
+```js
+describe.skip("Test Suite", () => {
+  /* Skipped tests */
+});
+describe.skip("Test Suite");
+```
+
+```js
+// xdescribe
+xdescribe("skip this too", function () {
+  // xit
+  xit("not cool", function () {
+    // Not run
+  });
+});
+```
+

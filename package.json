@@ -1,32 +1,8 @@
 {
   "name": "eslint-plugin-bdd",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "ESLint plugin with rules to lint BDD specs.",
-  "main": "./index.js",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/nate-wilkins/eslint-plugin-bdd"
-  },
-  "homepage": "http://github.com/nate-wilkins/eslint-plugin-bdd",
-  "bugs": "http://github.com/nate-wilkins/eslint-plugin-bdd/issues",
-  "dependencies": {},
-  "peerDependencies": {
-    "eslint": ">=0.8.0"
-  },
-  "devDependencies": {
-    "chai": "^2.2.0",
-    "eslint-tool-test-files": "^0.2.2",
-    "gulp": "^3.8.11",
-    "gulp-eslint": "^0.9.0",
-    "gulp-factory-loader": "0.0.2",
-    "gulp-help": "^1.6.1",
-    "gulp-mocha": "^2.0.1"
-  },
-  "scripts": {
-    "test": "gulp test"
-  },
-  "author": "Nate-Wilkins <nwilkins2012@gmail.com> (http://nate-wilkins.github.io)",
-  "license": "MIT",
+  "author": "Nate-Wilkins <nate-wilkins@code-null.com> (https://github.com/Nate-Wilkins)",
   "keywords": [
     "eslintplugin",
     "eslint-plugin",
@@ -42,5 +18,44 @@
     "fdescribe",
     "ddescribe",
     "iit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nate-wilkins/eslint-plugin-bdd"
+  },
+  "homepage": "http://github.com/nate-wilkins/eslint-plugin-bdd",
+  "bugs": "http://github.com/nate-wilkins/eslint-plugin-bdd/issues",
+  "main": "lib/bdd.js",
+  "scripts": {
+    "test:lint": "yarn eslint './**/*.js'",
+    "test": "yarn nyc yarn mocha tests --recursive && yarn test:lint",
+    "release": "yarn np"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/eslint-parser": "^7.14.5",
+    "@babel/preset-flow": "^7.14.5",
+    "@typescript-eslint/parser": "^4.24.0",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsort": "^1.1.2",
+    "expect.js": "^0.3.1",
+    "mocha": "^9.0.0",
+    "np": "^7.5.0",
+    "nyc": "^15.1.0",
+    "prettier": "2.3.1",
+    "typescript": "^4.3.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
   ]
 }
+
