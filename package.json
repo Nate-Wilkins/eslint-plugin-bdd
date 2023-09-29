@@ -14,7 +14,7 @@
     "eslint": ">=0.8.0"
   },
   "devDependencies": {
-    "chai": "^2.2.0",
+    "chai": "^4.3.10",
     "eslint-tool-test-files": "^0.2.2",
     "gulp": "^3.8.11",
     "gulp-eslint": "^0.9.0",
