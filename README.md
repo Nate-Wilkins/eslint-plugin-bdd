@@ -2,7 +2,6 @@
 
 [![npm](http://img.shields.io/npm/v/eslint-plugin-bdd.svg?style=flat-square)](https://www.npmjs.org/package/eslint-plugin-bdd)
 [![license](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/Nate-Wilkins/eslint-plugin-bdd/blob/master/LICENSE)
-[![status](https://img.shields.io/travis/Nate-Wilkins/eslint-plugin-bdd.svg?style=flat-square)](https://travis-ci.org/Nate-Wilkins/eslint-plugin-bdd)
 [![test coverage](https://img.shields.io/badge/test%20coverage-100%25-green?style=flat-square)](https://travis-ci.com/Nate-Wilkins/eslint-plugin-jsort)
 [![dependencies](https://badges.depfu.com/badges/9d2beee59530f90517a8918dc718a973/overview.svg)](https://badges.depfu.com/github/Nate-Wilkins/eslint-plugin-bdd?project_id=28347)
 
