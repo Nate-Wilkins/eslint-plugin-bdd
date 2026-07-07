@@ -36,7 +36,7 @@
     "@babel/core": "^7.14.3",
     "@babel/eslint-parser": "^7.14.5",
     "@babel/preset-flow": "^7.14.5",
-    "@typescript-eslint/parser": "^4.24.0",
+    "@typescript-eslint/parser": "^8.63.0",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsort": "^1.1.2",
